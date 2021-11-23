@@ -38,8 +38,9 @@ while True:
     if not authors:
         print('No Authors')
         break
-    else:
-        page += 1
-        for name in soup.select('.author'):
-            u_authors.add(name.text)
+
+    page += 1
+    for name in soup.select('.author'):
+        u_authors.add(name.text)
+
 print(u_authors)
